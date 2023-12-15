@@ -6,11 +6,20 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      quahon: "quahon",
+      dm: "DM Serif Display",
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      transitionTimingFunction: {
+        expo: "cubic-bezier(0.87, 0, 0.13, 1)",
+      },
+      animation: {
+        "spin-slow": "spin 20s linear infinite",
+      },
+      colors: {
+        violet: "#874493",
+        pinkish: "#EA6577",
       },
     },
   },
