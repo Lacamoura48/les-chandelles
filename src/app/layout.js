@@ -7,7 +7,7 @@ import './globals.css'
 const quahon = localFont({
   src: [
     {
-      path: "../../public/fonts/Quahon.otf",
+      path: "./assets/fonts/Quahon.otf",
       weight: "400",
       style: "normal",
     },
