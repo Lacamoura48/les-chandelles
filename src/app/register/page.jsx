@@ -1,9 +1,9 @@
 import React from 'react'
 
-function page() {
+function Register() {
   return (
-    <div>page</div>
+    <div>Register</div>
   )
 }
 
-export default page
+export default Register
