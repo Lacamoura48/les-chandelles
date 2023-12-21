@@ -7,8 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      quahon: "quahon",
-      dm: "DM Serif Display",
+      quahon: "var(--font-quahon)",
+      dm: "var(--font-dm)",
     },
     extend: {
       transitionTimingFunction: {

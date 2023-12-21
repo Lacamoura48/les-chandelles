@@ -1,10 +1,15 @@
+import Product from "@/components/cards/Product";
 import Footer from "@/components/sections/Footer";
 import Header from "@/components/sections/Header";
+import axios from "@/libs/axios";
 
-export default function Bougies() {
+export default async function Bougies() {
+
+        const items = await axios.get('/api/products')
+
   return (
     <>
-      <Header />
+      
       <section className="max-w-7xl mx-auto pt-4 lg:pt-20">
         <div className="flex items-center h-[5rem] px-2 lg:mx-0">
           <div className="flex-1">
@@ -41,182 +46,9 @@ export default function Bougies() {
       </section>
       <section>
         <div className="max-w-7xl grid grid-cols-2 lg:grid-cols-4 lg:mx-auto mb-12 gap-5 mx-5">
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
-          <button href="/produit.html" className="w-full flex flex-col">
-            <div className="aspect-square relative w-full max-w-[20rem] rounded-xl overflow-hidden">
-              <img
-                className="w-full h-full object-cover"
-                src="/images/hero-image.jpg"
-                alt="bougie image"
-              />
-            </div>
-            <div className="w-full text-start px-2">
-              <h2 className="font-dm text-lg -mb-1">Lorem ipsum dolo</h2>
-              <a
-                href="/produits.html"
-                className="hover:text-black text-gray-400 text-sm"
-              >
-                Kids
-              </a>
-              <p className="text-[#874392] font-bold text-xl mt-2">
-                59.99
-                <span className="font-normal text-xs text-gray-400">MAD</span>
-              </p>
-            </div>
-          </button>
+            {items?.data?.map((item)=>{
+                return <Product />
+            })}
         </div>
       </section>
       <section className="mb-12">
@@ -235,7 +67,7 @@ export default function Bougies() {
           </div>
         </div>
       </section>
-<Footer />
+
     </>
   );
 }

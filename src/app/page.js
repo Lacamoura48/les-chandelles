@@ -1,12 +1,7 @@
-import Footer from "@/components/sections/Footer";
-import Header from "@/components/sections/Header";
-import Image from "next/image";
-
 export default function Home() {
   return (
     <>
-      <Header />
-      <section className="lg:h-[46rem] h-[32rem] lg:pl-[10vw] border-y border-y-pinkish bg-[url('/images/hero-image.jpg')] lg:bg-cover bg-center border flex flex-col justify-center lg:gap-10 gap-5">
+      <section className="lg:h-[46rem] h-[32rem] lg:pl-[10vw] border-b border-b-pinkish bg-[url('/images/hero-image.jpg')] lg:bg-cover bg-center border flex flex-col justify-center lg:gap-10 gap-5">
         <h1 className="text-violet lg:text-5xl lg:text-justify text-center text-4xl max-w-[34rem]">
           Atelier de fabrication de bougies personnalisées
         </h1>
@@ -15,11 +10,11 @@ export default function Home() {
         </button>
       </section>
       <section>
-        <h2 className="lg:text-5xl text-3xl text-violet font-dm text-center md:py-20 py-12">
+        <h2 className="lg:text-5xl mx-auto text-3xl text-violet font-dm  text-center md:py-20 py-12 relative w-fit before:absolute before:w-20 before:h-20 before:rounded-full before:bg-pink-500 before:top-1/2 before:-translate-y-1/2 before:-left-5 before:-z-10 before:opacity-40">
           MEILLEURES VENTES
         </h2>
-        <div className="max-w-4xl px-2 lg:px-0 lg:h-[56rem] h-[28rem] mx-auto grid grid-cols-4 md:gap-3 gap-2">
-          <div className="bg-[url('https://images.unsplash.com/photo-1532592068623-db1978e40df5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] relative overflow-hidden bg-cover bg-center rounded-xl col-start-1 col-end-3 row-span-2">
+        <div className="lg:px-[8vw] px-2 lg:h-auto aspect-[1.2] h-[28rem] mx-auto grid grid-cols-4 md:gap-3 gap-2">
+          <div className="bg-[url('/images/meilleur-1.png')] relative overflow-hidden bg-cover bg-center rounded-xl col-start-1 col-end-3 row-span-2">
             <div className="flex group items-end lg:p-4 p-1 justify-center bg-black hover:bg-opacity-20 bg-opacity-0 absolute inset-0 transition-colors duration-500">
               <div className="flex items-center group-hover:translate-y-0 translate-y-20 transition-transform gap-1">
                 <h3 className="lg:text-lg  bg-white lg:px-6 py-1 w-fit rounded-md border border-black">
@@ -48,14 +43,14 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <h3 className="border-y border-y-pinkish lg:py-10 py-4 xl:text-6xl text-3xl text-violet text-center lg:mt-28 mt-14 lg:mb-20 mb-4">
+      <h3 className="font-quahon border-y border-y-pinkish lg:py-10 py-4 xl:text-6xl text-3xl text-violet text-center lg:mt-28 mt-14 lg:mb-20 mb-4">
         Crafting light, Sharing delight
       </h3>
       <section className="">
-        <h2 className="text-5xl text-violet font-dm text-center lg:py-16 py-10">
+        <h2 className="text-5xl text-violet font-dm text-center lg:py-16 py-10 relative w-fit before:absolute before:w-20 before:h-20 before:rounded-full before:bg-pink-500 before:top-1/2 before:-translate-y-1/2 before:-left-5 before:-z-10 before:opacity-40 mx-auto">
           NOS PARFUMS
         </h2>
-        <div className="max-w-6xl xl:columns-4 sm:columns-3 columns-2 xl:px-0 px-3 md:gap-5 gap-3 mx-auto break-inside-avoid mb-20">
+        <div className="lg:px-[8vw] xl:columns-4 sm:columns-3 columns-2 px-3 md:gap-5 gap-3 mx-auto break-inside-avoid mb-20">
           <a
             className="block w-full group md:mb-5 mb-3 rounded-xl overflow-hidden relative"
             href="#"
@@ -176,7 +171,6 @@ export default function Home() {
           <button className="px-6 py-2 bg-black text-white">S'abboner</button>
         </form>
       </section>
-      <Footer />
     </>
   );
 }

@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: quahon;
-  src: url('/fonts/Quahon.otf');
-}
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
