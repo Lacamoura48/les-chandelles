@@ -75,7 +75,7 @@ function Cart() {
         <div
           className={`text-black flex flex-col gap-5 w-full mt-8 overflow-y-scroll h-full`}
         >
-          {cartItems.length ? (
+          {/* {cartItems.length ? (
             cartItems?.map((item) => {
               return <CartItem item={item} key={item.id} />;
             })
@@ -91,7 +91,7 @@ function Cart() {
                 </button>
               </Link>
             </div>
-          )}
+          )} */}
         </div>
         {/* {cartItems.length ? ( <div className='mt-3 flex justify-between items-center p-3 rounded-md bg-gray-50 '>
             <Link href={{pathname : userConnected ? '/checkout' : '/login'}}><button onClick={setShow} className='px-6 py-4 bg-[#7D916C] text-white md:text-[18px] text-[16px]'>Check out</button></Link>
