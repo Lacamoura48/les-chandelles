@@ -5,5 +5,3 @@ function Bougie() {
     <div>Bougie</div>
   )
 }
-
-export default Bougie

@@ -1,9 +1,7 @@
 import Product from "@/components/cards/Product";
-import Footer from "@/components/sections/Footer";
-import Header from "@/components/sections/Header";
 import axios from "@/libs/axios";
 
-export default async function Bougies() {
+ export default async function Bougies() {
 
         const items = await axios.get('/api/products')
 
