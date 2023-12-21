@@ -76,7 +76,7 @@ function Cart() {
           className={`text-black flex flex-col gap-5 w-full mt-8 overflow-y-scroll h-full`}
         >
           {cartItems.length ? (
-            cartItems?.map((item) => {
+            JSON.parse(cartItems)?.map((item) => {
               return <CartItem item={item} key={item.id} />;
             })
           ) : (
