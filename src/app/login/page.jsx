@@ -1,7 +1,6 @@
 "use client";
 import Input from "@/components/inputs/Input";
 import InputError from "@/components/inputs/InputError";
-import Label from "@/components/inputs/Label";
 import { useAuth } from "@/hooks/auth";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +9,7 @@ import { useState } from "react";
 const Login = () => {
   const { login } = useAuth({
     middleware: "guest",
-    redirectIfAuthenticated: "/dashboard",
+    redirectIfAuthenticated: "/",
   });
 
   const [email, setEmail] = useState("");
@@ -32,7 +31,7 @@ const Login = () => {
   };
 
   return (
-    <main className="md:grid grid-cols-2 h-[calc(100vh-8.5rem)]">
+    <main className="md:grid grid-cols-2 h-[calc(100vh-8.5rem)] font-dm">
       <div className="md:h-full h-[14vh] mb-10 md:mb-0 w-full relative md:border-r-2 border-r-violet md:block">
         <Image
           src="/images/login-image.png"
@@ -46,7 +45,7 @@ const Login = () => {
         className="max-w-lg w-full flex flex-col justify-center mx-auto px-8 md:px-0"
       >
         <h1 className="sm:text-4xl text-3xl hover-underline-animation">Se connecter</h1>
-        <p className="mb-10">
+        <p className="mb-10 font-quahon">
           Vous n'avez pas encore de compte?{" "}
           <Link href="/register" className="text-violet underline">
             S'inscrire

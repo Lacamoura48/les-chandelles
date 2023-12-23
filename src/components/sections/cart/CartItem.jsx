@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import {motion} from "framer-motion";
 import Image from "next/image";
+import useLocalStorage from "@/hooks/useLocalStorage";
 
 
 
 
-function CartItem({ item, variants}) {
+function CartItem({ item, onRemove}) {
   let [quantity, setQuantity]= useState(item.quantity);
+  const [cartItems, setCartItems] = useLocalStorage("cartItems");
 //   useEffect(()=>{
 //     setQuantity(item.quantity)
 //     dispatch(cartActions.SET_ITEM_QUANTITY({id : item.id , quantity : quantity}))
@@ -31,10 +33,7 @@ function CartItem({ item, variants}) {
 //       setQuantity(parseInt(e.target.value))
     
 //     }
-//   function removeItem(){
-//             dispatch(cartActions.REMOVE_CART_ITEM(item.id))
-
-//     }
+ 
   
   return (
     <motion.div className="flex w-full py-2 px-2 hover:bg-gray-50 rounded-md cart-item">
@@ -73,8 +72,8 @@ function CartItem({ item, variants}) {
       </div>
       <div className="flex flex-col justify-between items-end">
         <button 
-        // onClick={removeItem} 
-        className="transition hover:bg-[#7c7c7c2c] p-3 rounded-sm"><img src="/icons/trash-icon-black.svg" className="w-7" alt="" /></button>
+        onClick={()=> onRemove(item.id)} 
+        className="rounded-lg p-3 buttonEffect"><img src="/SVG/trash.svg" className="w-5" alt="" /></button>
         <p className="ml-10 text-lg">total : <span className=" font-normal">{(item.quantity * item.price ).toFixed(2)} $</span></p>
         
       </div>

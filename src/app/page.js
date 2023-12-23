@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <>
-      <section className="lg:h-[46rem] h-[32rem] lg:pl-[10vw] border-b border-b-pinkish bg-[url('/images/hero-image.jpg')] lg:bg-cover bg-center border flex flex-col justify-center lg:gap-10 gap-5">
+      <section className="h-[32rem] w-full lg:pl-[10vw] lg:aspect-[1.8] lg:h-auto border-b border-b-pinkish bg-[url('/images/hero-image.jpg')] lg:bg-cover bg-center border flex flex-col justify-center lg:gap-10 gap-5">
         <h1 className="text-violet lg:text-5xl lg:text-justify text-center text-4xl max-w-[34rem]">
           Atelier de fabrication de bougies personnalisées
         </h1>

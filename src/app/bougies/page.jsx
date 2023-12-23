@@ -1,14 +1,27 @@
+"use client"
 import Product from "@/components/cards/Product";
 import axios from "@/libs/axios";
+import { useEffect, useState } from "react";
 
- export default async function Bougies() {
-
-        const items = await axios.get('/api/products')
+ export default function Bougies() {
+   const [bougies, setBougies] = useState([])
+   const [favorites, setFavorites] = useState([])
+    useEffect(()=>{
+      async function fetchData(){
+        await axios.get('/api/products').then((res)=> {
+          setBougies([...res.data])
+        })
+        await axios.get('/api/favorites').then((res)=> {
+          setFavorites([...res.data])
+        })
+      }
+      fetchData()
+    }, [])
 
   return (
     <>
       
-      <section className="max-w-7xl mx-auto pt-4 lg:pt-20">
+      <section className="max-w-7xl mx-auto pt-4 lg:pt-20 font-quahon">
         <div className="flex items-center h-[5rem] px-2 lg:mx-0">
           <div className="flex-1">
             <a
@@ -44,8 +57,8 @@ import axios from "@/libs/axios";
       </section>
       <section>
         <div className="max-w-7xl grid grid-cols-2 lg:grid-cols-4 lg:mx-auto mb-12 gap-5 mx-5">
-            {items?.data?.map((item)=>{
-                return <Product />
+            {bougies.map((item)=>{
+                return <Product bougie={item} favorited={favorites.find((bg)=> bg.product_id == item.id)} />
             })}
         </div>
       </section>

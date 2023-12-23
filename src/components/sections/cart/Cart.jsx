@@ -14,8 +14,11 @@ function Cart() {
   const [show, setShow] = useState(false);
   const [total, setTotal] = useState(0);
   const [cartItems, setCartItems] = useLocalStorage("cartItems", "[]");
+  const [itemsToShow, setItemsToShow] = useState([]);
   useEffect(() => {
-    if (cartItems.length) {
+    const items = [...cartItems]
+    setItemsToShow(items)
+    if (itemsToShow?.length) {
       animate(
         ".cart-item",
         show ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 },
@@ -23,7 +26,6 @@ function Cart() {
       );
     }
   }, [show]);
-  console.log(cartItems);
   function addItem() {
     const cartItemsObj = [...cartItems];
     cartItemsObj.push({
@@ -36,6 +38,12 @@ function Cart() {
     });
     setCartItems(cartItemsObj);
   }
+  function removeItem(id){
+    let items = [...cartItems]
+    items = items.filter((ci)=> ci.id !== id)
+    setCartItems(items)
+    setItemsToShow(items)
+}
   return (
     <>
       <button
@@ -73,21 +81,22 @@ function Cart() {
         </button>
 
         <div
-          className={`text-black flex flex-col gap-5 w-full mt-8 overflow-y-scroll h-full`}
+          className={`text-black flex flex-col gap-5 w-full mt-8 overflow-y-scroll h-[calc(100%-10rem)]`}
         >
-          {cartItems.length ? (
-            JSON.parse(cartItems)?.map((item) => {
-              return <CartItem item={item} key={item.id} />;
+          {itemsToShow.length ? (
+
+            itemsToShow.map((item) => {
+              return <CartItem item={item} key={item.id} onRemove={removeItem} />;
             })
-          ) : (
+            ) : (
             <div
               onClick={setShow}
               className="text-gray-500 h-full flex flex-col gap-10 justify-center items-center text-3xl text-center"
             >
-              You still haven&apos;t added anything to the cart yet :&apos;({" "}
+              Vous n'avez encore rien ajouté au panier :(
               <Link href="/plants">
-                <button className="md:px-10 md:rounded-md transition  bg-[#7D916C] hover:bg-[#6e805e] text-white border border-[#7D916C] py-5 text-[18px]">
-                  View the plants
+                <button className="md:px-10 md:rounded-md transition  bg-violet buttonEffect text-white border py-5 text-[18px]">
+                  Explorer nos bougies
                 </button>
               </Link>
             </div>

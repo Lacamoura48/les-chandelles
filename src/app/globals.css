@@ -23,3 +23,7 @@
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+.buttonEffect {
+  @apply hover:shadow-md transition-all hover:scale-105 active:scale-75
+}
