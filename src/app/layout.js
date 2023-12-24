@@ -4,6 +4,7 @@ import Header from '@/components/sections/Header'
 import Footer from '@/components/sections/Footer'
 import './globals.css'
 
+
 const quahon = localFont({
   src: [
     {
@@ -21,6 +22,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <body className={`${quahon.variable} ${dm.variable} overflow-x-hidden`}>

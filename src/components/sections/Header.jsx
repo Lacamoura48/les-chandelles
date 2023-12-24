@@ -1,8 +1,11 @@
+"use client"
 import React from "react";
 import Cart from "./cart/Cart";
 import Link from "next/link";
+import { useAuth } from "@/hooks/auth";
 
 function Header() {
+  const {user} = useAuth();
   return (
     <>
       <h3 className="bg-violet text-center text-white sm:text-xl text-lg py-1 font-quahon">
@@ -35,13 +38,13 @@ function Header() {
                 alt="heart"
               />
             </button>
-            <button className="hover:bg-white cursor-pointer hover:shadow-md rounded-xl transition-all hover:scale-105 active:scale-75 p-2">
+            <Link href={user?.id ? "/profile" : "/login"} className="hover:bg-white cursor-pointer hover:shadow-md rounded-xl transition-all hover:scale-105 active:scale-75 p-2">
               <img
                 className="w-5 h-5 object-fit"
                 src="/SVG/user.svg"
                 alt="search"
               />
-            </button>
+            </Link>
             <Cart />
           </li>
         </ul>

@@ -29,10 +29,10 @@ function CartItem({ item, onRemove}) {
   
 //     }
   
-//   function editQuantity(e){
-//       setQuantity(parseInt(e.target.value))
+  function editQuantity(e){
+      setQuantity(parseInt(e.target.value))
     
-//     }
+    }
  
   
   return (
@@ -59,7 +59,7 @@ function CartItem({ item, onRemove}) {
               type="number"
               className="bg-gray-50 focus:outline-none py-1 px-2 w-10 text-center"
               value={quantity}
-            //   onBlur={editQuantity}
+              onChange={editQuantity}
               
             />
             <button 
