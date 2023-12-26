@@ -2,10 +2,10 @@ export default function Home() {
   return (
     <>
       <section className="h-[32rem] w-full lg:pl-[10vw] lg:aspect-[1.8] lg:h-auto border-b border-b-pinkish bg-[url('/images/hero-image.jpg')] lg:bg-cover bg-center border flex flex-col justify-center lg:gap-10 gap-5">
-        <h1 className="text-violet lg:text-5xl lg:text-justify text-center text-4xl max-w-[34rem]">
+        <h1 className="font-quahon text-violet lg:text-5xl lg:text-justify text-center text-4xl max-w-[34rem]">
           Atelier de fabrication de bougies personnalisées
         </h1>
-        <button className="px-8 py-2 mx-auto lg:mx-0 w-fit bg-white text-lg text-violet border-2 border-violet rounded-xl shadow-[3px_4px_0_#874493] hover:shadow-[0px_0px_0_#874493] hover:translate-x-[3px] hover:translate-y-[4px] transition-all">
+        <button className="font-dm px-8 py-2 mx-auto lg:mx-0 w-fit bg-white text-lg text-violet border-2 border-violet rounded-xl shadow-[3px_4px_0_#874493] hover:shadow-[0px_0px_0_#874493] hover:translate-x-[3px] hover:translate-y-[4px] transition-all">
           Créer un compte
         </button>
       </section>
@@ -159,16 +159,16 @@ export default function Home() {
         </div>
       </section>
       <section className="py-20">
-        <h2 className="font-playfaire lg:text-3xl text-2xl max-w-2xl mx-auto w-fit mb-10 text-center">
+        <h2 className="font-dm lg:text-3xl text-2xl max-w-2xl mx-auto w-fit mb-10 text-center">
           Abonnez-vous à nos emails
         </h2>
         <form action="" className="w-full pb-24 justify-center flex">
           <input
             type="email"
-            className="lg:w-[24rem] border border-black py-2 px-4 focus:outline-none font-playfaire"
+            className="lg:w-[24rem] border border-black py-2 px-4 focus:outline-none font-dm"
             placeholder="Email"
           />
-          <button className="px-6 py-2 bg-black text-white">S'abboner</button>
+          <button className="px-6 py-2 bg-black text-white font-dm">S'abboner</button>
         </form>
       </section>
     </>

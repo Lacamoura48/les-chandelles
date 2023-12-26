@@ -17,7 +17,7 @@ function Header() {
           <li className="flex-1">
             <Link href="/">
               <img
-                className="md:w-44 w-32 lg:mx-auto"
+                className="md:w-48 w-32 lg:mx-auto"
                 src="/SVG/logo.svg"
                 alt="les chandelles logo"
               />
