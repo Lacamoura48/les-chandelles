@@ -14,7 +14,7 @@ export default function Home() {
           MEILLEURES VENTES
         </h2>
         <div className="lg:px-[8vw] px-2 lg:h-auto aspect-[1.2] h-[28rem] mx-auto grid grid-cols-4 md:gap-3 gap-2">
-          <div className="bg-[url('/images/meilleur-1.png')] relative overflow-hidden bg-cover bg-center rounded-xl col-start-1 col-end-3 row-span-2">
+          <div className="bg-[url('/SVG/item.svg')] relative overflow-hidden bg-cover bg-center rounded-xl col-start-1 col-end-3 row-span-2">
             <div className="flex group items-end lg:p-4 p-1 justify-center bg-black hover:bg-opacity-20 bg-opacity-0 absolute inset-0 transition-colors duration-500">
               <div className="flex items-center group-hover:translate-y-0 translate-y-20 transition-transform gap-1">
                 <h3 className="lg:text-lg  bg-white lg:px-6 py-1 w-fit rounded-md border border-black">
@@ -33,13 +33,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-[url('https://images.unsplash.com/photo-1605101600616-a8c6db5b98aa?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center rounded-xl col-start-3 col-end-5"></div>
-          <div className="bg-[url('https://images.unsplash.com/photo-1570823635306-250abb06d4b3?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center rounded-xl col-span-2"></div>
+          <div className="bg-[url('/images/meilleur-2.png')] bg-cover bg-center rounded-xl col-start-3 col-end-5"></div>
+          <div className="bg-[url('/images/meilleur-3.png')] bg-cover bg-center rounded-xl col-span-2"></div>
 
           <div className="col-span-full flex md:gap-3 gap-2">
-            <div className="bg-[url('https://images.unsplash.com/photo-1608263153703-caa6b0fd7bc7?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center rounded-xl flex-1"></div>
-            <div className="bg-[url('https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center rounded-xl flex-1"></div>
-            <div className="bg-[url('https://images.unsplash.com/photo-1549877696-a46dda28ffa8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center rounded-xl flex-1"></div>
+            <div className="bg-[url('/images/meilleur-3.png')] bg-cover bg-center rounded-xl flex-1"></div>
+            <div className="bg-[url('/images/meilleur-5.png')] bg-cover bg-center rounded-xl flex-1"></div>
+            <div className="bg-[url('/images/login-image.png')] bg-cover bg-center rounded-xl flex-1"></div>
           </div>
         </div>
       </section>

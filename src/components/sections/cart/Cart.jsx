@@ -5,11 +5,6 @@ import useLocalStorage from "@/hooks/useLocalStorage";
 import Link from "next/link";
 import CartItem from "./CartItem";
 
-const animeChildren = {
-  hidden: { opacity: 0, y: -20 },
-  shown: { opacity: 1, y: 0, transition: { duration: 0.3 } },
-};
-
 function Cart() {
   const [show, setShow] = useState(false);
   const [total, setTotal] = useState(0);
@@ -26,18 +21,6 @@ function Cart() {
       );
     }
   }, [show]);
-  function addItem() {
-    const cartItemsObj = [...cartItems];
-    cartItemsObj.push({
-      title: "text",
-      quantity: 1,
-      price: 12,
-      mainPic:
-        "https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      id: Math.random() * 100,
-    });
-    setCartItems(cartItemsObj);
-  }
   function removeItem(id){
     let items = [...cartItems]
     items = items.filter((ci)=> ci.id !== id)
@@ -69,17 +52,6 @@ function Cart() {
         >
           <img className="w-5 h-5 object-fit" src="/SVG/x.svg" alt="search" />
         </button>
-        <button
-          onClick={() => addItem()}
-          className=" cursor-pointer shadow-md rounded-xl transition-all hover:scale-105 active:scale-75 p-4"
-        >
-          <img
-            className="w-5 h-5 object-fit"
-            src="/SVG/heart.svg"
-            alt="search"
-          />
-        </button>
-
         <div
           className={`text-black flex flex-col gap-5 w-full mt-8 overflow-y-scroll h-[calc(100%-10rem)]`}
         >
